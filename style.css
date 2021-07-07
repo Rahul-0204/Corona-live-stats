@@ -1,0 +1,258 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --main_color:#073172;
+    --font1:'Roboto', sans-serif;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-family: var(--font1);
+    font-size: 14px;
+}
+
+.hide{
+    display: none;
+}
+
+.fadeIn{
+    animation: fade 0.5s ease-in-out;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    height: 18%;
+    width: 100%;
+    margin: 0 auto;
+    background-color: aliceblue;
+    
+    
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+ 
+}
+
+.logo img{
+    width: 18%;
+}
+
+.logo p{
+    font-weight: bold;
+    color: var(--main_color);
+}
+
+nav ul{
+    
+    display: flex;
+    align-items: center;
+
+}
+
+nav ul li{
+    text-decoration: none;
+}
+nav ul li:last-child{
+    padding-right: 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:var(--main_color);
+    padding: 10px;;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stats{
+width: 100%;
+height: 600px;
+background-image:linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.1)),url("covid_bg.jpg");
+background-size: cover;
+}
+
+.latest_report{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    color: rgb(192, 243, 235);
+
+}
+
+.country,.total_cases,.recovered,.deaths{
+    height: 100px;
+
+}
+
+.name{
+    font-size: 2.2em;
+    color: var(--main_color);
+    font-weight: bold;
+}
+
+.change_country{
+    cursor: pointer;
+}
+
+.title{
+    font-size: 1.3em;
+}
+
+.total_cases .value{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+.recovered .value{
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(55, 216, 103);
+}
+
+.deaths .value{
+    font-size: 2em;
+    font-weight: bold;
+    color:rgb(223, 18, 18);
+}
+
+.new_value{
+    font-size: 1.3em;
+}
+
+.chart{
+    width:80%;
+    height: 70vh;
+    min-height: 500px;
+
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.search_country{
+    position: relative;
+    top:10px;
+}
+
+.search_box{
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 400px;
+    height: 30px;
+    background-color: #111;
+    z-index: 1;
+}
+
+.search_box input{
+    width: 360px;
+    height: 25px;
+
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    padding-left: 15px;
+    font-size: 1.2em;
+}
+
+.search_box span{
+    width: 20px;
+    padding-right: 5px;
+    cursor: pointer;
+
+}
+
+.country_list{
+    display: flex;
+    position: absolute;
+    top: 30px;
+
+    width: 400px;
+    height: 300px;
+    
+    background-color: rgb(0, 0, 0);
+    opacity: 0.8;
+    overflow-y: scroll;
+}
+
+.country_list ul{
+    width: 100%;
+}
+.country_list ul li{
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    color: #fff;
+}
+.country_list ul li:hover{
+
+    border-left: 1px solid white;
+}
+
+
+
+
+footer{
+    max-width: 1200px;
+    height: 60p;
+    
+    margin: 0 auto;
+    background-color: var(--main_color);
+}
+
+.footer_container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright{
+    height: 100%;
+    display: flex;
+    
+    flex-direction: column;
+    justify-content: center;
+}
+
+.copyright p{
+    color: white;
+
+}
+
+@media screen and (max-width:600px){
+    .latest_report{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Live Updates</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="country.js"></script>
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="covid.jpg" alt="">
+            <p>Covid-19<br/>Live Updates</p>
+        </div>
+        <nav>
+            <ul type="none">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="stats">
+            <div class="latest_report">
+                <div class="country">
+                    <div class="name">Loading...</div>
+                    <div class="change_country">Change Country</div>
+                    <div class="search_country hide">
+                        <div class="search_box">
+                            <input type="text" id="search_input" name="search_input" placeholder="--Search Country--">
+                            <span class="close">&times;</span>
+                        </div>
+                        <div class="country_list">
+                           
+                        </div>
+                
+                </div>
+            </div>
+                <div class="total_cases">
+                    <div class="title">Total Cases</div>
+                    <div class="value">0</div>
+                    <div class="new_value">+0</div>
+                </div>
+                <div class="recovered">
+                    <div class="title">Recovered</div>
+                    <div class="value">0</div>
+                    <div class="new_value">+0</div>
+                </div>
+                <div class="deaths">
+                    <div class="title">Deaths</div>
+                    <div class="value">0</div>
+                    <div class="new_value">+0</div>
+                </div>
+            </div>
+
+            <div class="chart">
+                <canvas id="axes_line_chart"></canvas>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <div class="copyright">
+                <p>Copyright &copy 2020 Corona Stats</p>
+
+            </div>
+        </div>
+    </footer>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+    integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI="
+    crossorigin="anonymous"
+  ></script>
+    <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+    
+    
+    
+    <!-- <script src="country.js"></script>
+    <script src="index.js"></script> -->
+    
+</body>
+</html>
